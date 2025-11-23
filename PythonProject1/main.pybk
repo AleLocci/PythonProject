@@ -1,0 +1,49 @@
+
+"""import sys
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton
+
+
+def greet_user():
+    print("Oi")
+
+app = QApplication(sys.argv)
+window = QWidget()
+window.setWindowTitle("Event")
+
+button = QPushButton("Clic Me", window)
+button.clicked.connect(greet_user)
+button.move(100, 100)
+
+window.show()
+sys.exit(app.exec())"""
+"""   
+import ttkbootstrap as ttk
+from ttkbootstrap.constants import *
+
+root = ttk.Window(themename="cyborg")
+root.title("ttk Demo")
+
+
+ttk.Button(root, text="Click on me", bootstyle="SUCCESS").pack(pady=20)
+
+root.mainloop()
+"""
+""
+import customtkinter as ctk
+
+def add():
+    print(2+2)
+
+ctk.set_appearance_mode("Dark")          # opções: "Light", "Dark", "System"
+ctk.set_default_color_theme("blue")      # opções: "blue", "green", "dark-blue"
+
+
+root = ctk.CTk()
+root.title("padronização Tkinter Demo")
+root.geometry("100x150")
+button = ctk.CTkButton(root, text="OK",text_color="red")
+button.pack(pady=20)
+root.mainloop()
+
+
+
