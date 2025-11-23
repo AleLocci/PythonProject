@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/onto.owl"
+         xmlns="http://example.org/onto.owl#">
+
+<owl:Ontology rdf:about="http://example.org/onto.owl"/>
+
+<owl:ObjectProperty rdf:about="#ensina">
+  <rdfs:domain rdf:resource="#Professor"/>
+  <rdfs:range rdf:resource="#Estudante"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#idade">
+  <rdfs:domain rdf:resource="#Pessoa"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Pessoa">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Estudante">
+  <rdfs:subClassOf rdf:resource="#Pessoa"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Professor">
+  <rdfs:subClassOf rdf:resource="#Pessoa"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Joao">
+  <rdf:type rdf:resource="#Professor"/>
+  <ensina rdf:resource="#Maria"/>
+  <idade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</idade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Maria">
+  <rdf:type rdf:resource="#Estudante"/>
+  <idade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</idade>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
