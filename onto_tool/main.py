@@ -1,12 +1,12 @@
-import rdflib
-from pyshacl import validate
-from owlready2 import *
+from tool import Onto   # importa a classe Onto do arquivo tool.py
 
+if __name__ == "__main__":
+    onto = Onto("Pizza Ontology", "https://protege.stanford.edu/ontologies/pizza/pizza.owl")
+    pizza_onto=[]
+    pizza_onto = onto.load_onto
 
-onto = get_ontology("https://protege.stanford.edu/ontologies/pizza/pizza.owl").load()
+#Test#######
+print(pizza_onto[0])
+print(pizza_onto[1])
+print(pizza_onto[2])
 
-cls = []
-cls = onto.classes()
-ind= onto.individuals()
-print(list(cls))
-print(list(ind))
