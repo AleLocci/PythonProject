@@ -46,7 +46,13 @@ for section in properties:
 </code></pre>
 
 ...
+<pre><code class="language-python">
 onto_tool/
 │── tool.py        # Onto class definition
 │── main.py        # Example usage
 │── README.md      # Documentation
+</code></pre>
+
+
+open to feedback
+**https://github.com/AleLocci
